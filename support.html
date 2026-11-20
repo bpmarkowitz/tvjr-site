@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TV Jr. Support</title>
+  <meta name="description" content="Help with TV Jr.: adding HDHomeRun, Jellyfin, ErsatzTV and playlists, watching on HomeView, and contact.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="TV Jr. home"><i class="logo" aria-hidden="true"></i><span>TV Jr.</span></a>
+      <nav class="site-nav">
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>Support</h1>
+    <p class="updated">Live TV and your library on HomeView and iPhone.</p>
+
+    <h2>Getting started</h2>
+    <p>TV Jr. doesn't come with any channels. It plays the TV you bring. Tap the section menu at the top right, choose <strong>Settings</strong>, then <strong>Sources</strong>, and tap <strong>+</strong>:</p>
+    <ul>
+      <li><strong>Add HDHomeRun</strong> finds the tuner on your Wi‑Fi and adds its channels.</li>
+      <li><strong>Add ErsatzTV</strong> finds ErsatzTV on your network and adds its channels.</li>
+      <li><strong>Import Playlist</strong> lets you pick channels from an M3U playlist (a link ending in <code>.m3u</code>).</li>
+      <li><strong>Add Stream Link</strong> adds a single live stream (a link usually ending in <code>.m3u8</code>).</li>
+      <li><strong>Add Jellyfin</strong> signs in to your Jellyfin server for your movies and shows.</li>
+    </ul>
+
+    <h2>Getting around</h2>
+    <ul>
+      <li><strong>Home</strong> shows your favorites and recent channels. <strong>Channels</strong> lists every channel by source. <strong>Library</strong> has your Jellyfin movies and shows. Switch with the menu at the top right.</li>
+      <li><strong>Watch:</strong> tap a channel or video to play it full screen. Close it and it keeps playing in the mini player at the bottom. Tap the mini player to go back to full screen.</li>
+      <li><strong>Favorites:</strong> swipe right on a channel, or touch and hold it.</li>
+      <li><strong>Order:</strong> in Settings, <strong>Sources</strong> sets the order of sources (drag them), and <strong>Reorder Channels</strong> arranges channels within each one.</li>
+      <li><strong>iPhone Duo:</strong> open it to watch on one side and browse on the other.</li>
+    </ul>
+
+    <h2>HomeView</h2>
+    <p>With your iPhone paired to HomeView, TV Jr. shows up on HomeView with Home, your channels, and your library. Tap anything to watch it full screen. Your iPhone needs to be nearby and on the same Wi‑Fi while you watch, since it does the work.</p>
+    <p>If TV Jr. doesn't appear on HomeView, restart your iPhone.</p>
+
+    <h2>HDHomeRun</h2>
+    <p>HDHomeRun channels play while your iPhone is on the same Wi‑Fi network as the tuner, usually at home. If no tuner is found, make sure TV Jr. has <strong>Local Network</strong> access in the Settings app. Each channel you watch uses one of the HDHomeRun's tuners.</p>
+    <p>The guide for HDHomeRun channels comes from SiliconDust, the maker of HDHomeRun. If a channel has no guide information, it's missing from their listings.</p>
+
+    <h2>Jellyfin</h2>
+    <p>Enter your server's address (for example <code>http://192.168.1.20:8096</code>, or a web address like <code>https://example.com/jellyfin</code>), then sign in with your user name and password, or use Quick Connect. Your Library shows Continue Watching and lets you browse Movies and TV Shows. What you watch is saved back to your server, so you can pick it up anywhere.</p>
+    <p>If Jellyfin is your only source, Home shows Continue Watching, Recently Added, and Browse.</p>
+
+    <h2>ErsatzTV: channels from your own media</h2>
+    <p><a href="https://ersatztv.org">ErsatzTV</a> is free, open-source software that turns your own movies and shows into live channels, complete with a program guide. It can use local folders, Jellyfin, Plex or Emby. Run it on a computer at home (Mac, Windows, Linux or Docker), make a channel, then in TV Jr. use <strong>Add ErsatzTV</strong>.</p>
+    <p>To add it by hand instead, use <strong>Import Playlist</strong> with this address, using your computer's name or IP address:</p>
+    <p><code>http://your-computer:8409/iptv/channels.m3u?mode=segmenter</code></p>
+    <p class="note">Keep the <code>?mode=segmenter</code> at the end. It tells ErsatzTV to send streams iPhone and HomeView can play.</p>
+
+    <h2>A channel won't tune</h2>
+    <p>Stream links can move, expire, or be limited to some countries. Channels from a playlist fetch a fresh link every time you tune. For a single stream link, check that it still works and update it in Sources.</p>
+
+    <h2>Where do I find streams?</h2>
+    <p>An HDHomeRun tuner brings in free over-the-air channels. Some TV and internet providers give subscribers a playlist link, some broadcasters publish free live streams, and home media servers can share channels as a playlist. Only add streams you have the right to watch.</p>
+
+    <h2>Backup</h2>
+    <p>With iCloud turned on, your sources and channels are backed up to your own iCloud automatically and restored on a new iPhone. You can also use <strong>Back Up Now</strong> and <strong>Restore from iCloud</strong> in Settings.</p>
+
+    <h2>Open source</h2>
+    <p>TV Jr. uses <a href="https://ffmpeg.org">FFmpeg</a> under the <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU LGPL v2.1</a> to play HDHomeRun broadcasts. For a copy of the exact FFmpeg source and build script used, email us.</p>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:support@tvjr.app">support@tvjr.app</a> and I'll get back to you.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav><a href="./">Home</a><a href="privacy.html">Privacy</a></nav>
+      <p>TV Jr. isn't affiliated with Jellyfin, SiliconDust or ErsatzTV.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TV Jr.</title>
+  <meta name="description" content="Live TV and your Jellyfin library on HomeView and iPhone. Works with HDHomeRun, Jellyfin, ErsatzTV and stream links.">
+  <meta name="apple-itunes-app" content="app-id=6818644922">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="TV Jr. home"><i class="logo" aria-hidden="true"></i><span>TV Jr.</span></a>
+      <nav class="site-nav">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <h1>Your TV, on HomeView.</h1>
+      <p class="lede">Live channels and your own movies and shows, on HomeView and iPhone.</p>
+      <a class="cta" href="https://apps.apple.com/app/id6818644922">Get it on the App Store</a>
+
+      <div class="device" aria-label="TV Jr. on HomeView">
+        <div class="frame">
+          <i class="camera"></i>
+          <div class="screen" id="screen">
+            <div class="placeholder"><i class="logo" aria-hidden="true"></i></div>
+            <!-- Square HomeView screenshots, one per <img>. They cross-fade every few seconds. -->
+            <!-- <img src="screens/home.png" alt="TV Jr. Home on HomeView"> -->
+          </div>
+        </div>
+        <div class="base"></div>
+      </div>
+      <div class="dots" id="dots" hidden></div>
+    </section>
+
+    <section class="section wrap" id="sources">
+      <h2>Works with what you have.</h2>
+      <p class="sub">TV Jr. doesn't come with channels. It plays the TV you already have at home.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 15v9"/><circle cx="14" cy="13" r="2" fill="currentColor" stroke="none"/>
+              <path d="M9.2 8.2a6.8 6.8 0 0 0 0 9.6M18.8 8.2a6.8 6.8 0 0 1 0 9.6"/>
+              <path d="M5.6 4.6a11.9 11.9 0 0 0 0 16.8M22.4 4.6a11.9 11.9 0 0 1 0 16.8"/>
+            </svg>
+          </div>
+          <h3>HDHomeRun</h3>
+          <p>Free over-the-air channels from your antenna, or cable, through an HDHomeRun tuner on your Wi‑Fi. Found automatically, with what's on now.</p>
+          <a class="more" href="https://www.silicondust.com">silicondust.com ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round">
+              <rect x="4" y="6" width="20" height="16" rx="3"/>
+              <path d="M4 11h20M9 6l-2 5M15 6l-2 5M21 6l-2 5"/>
+            </svg>
+          </div>
+          <h3>Jellyfin</h3>
+          <p>Your movies and shows from your own Jellyfin server, with Continue Watching and Recently Added. Pick up right where you left off.</p>
+          <a class="more" href="https://jellyfin.org">jellyfin.org ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3.5" y="8" width="21" height="15" rx="3"/>
+              <path d="M10 3.5l4 4.5 4-4.5"/>
+              <path d="M14 12.2l1.1 2.3 2.4.4-1.8 1.7.4 2.4-2.1-1.1-2.1 1.1.4-2.4-1.8-1.7 2.4-.4z" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <h3>ErsatzTV</h3>
+          <p>Turn your own media into live channels, complete with a guide. Free and open source, running on a computer at home.</p>
+          <a class="more" href="https://ersatztv.org">ersatztv.org ↗</a>
+        </article>
+      </div>
+
+      <p class="also"><strong>Plus playlists and stream links.</strong> Import an M3U playlist from your provider or media server, or add a single live stream by its link.</p>
+    </section>
+
+    <section class="section wrap">
+      <h2>Made for HomeView.</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Home, Channels, Library</h3>
+          <p>Favorites and recent channels up front, every channel by source, and your library one tap away.</p>
+        </div>
+        <div class="feature">
+          <h3>Full screen, then a mini player</h3>
+          <p>Watch full screen, then keep it playing in a mini player while you browse.</p>
+        </div>
+        <div class="feature">
+          <h3>On iPhone and iPhone Duo</h3>
+          <p>The same channels on your phone. Open iPhone Duo to watch on one side and browse on the other.</p>
+        </div>
+        <div class="feature">
+          <h3>Private by design</h3>
+          <p>No accounts, no ads, no tracking. Your channels stay on your devices and in your own iCloud.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+      <p>TV Jr. doesn't provide any channels. Only add streams you have the right to watch. TV Jr. isn't affiliated with Jellyfin, SiliconDust or ErsatzTV.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Cross-fade the HomeView screenshots, with a dot for each.
+    (function () {
+      var shots = [].slice.call(document.querySelectorAll('#screen img'));
+      if (!shots.length) return;
+      var dots = document.getElementById('dots'), i = 0, timer;
+      function show(n) {
+        shots[i].classList.remove('on'); dots.children[i] && dots.children[i].setAttribute('aria-current', 'false');
+        i = n; shots[i].classList.add('on'); dots.children[i] && dots.children[i].setAttribute('aria-current', 'true');
+      }
+      if (shots.length > 1) {
+        shots.forEach(function (img, n) {
+          var b = document.createElement('button');
+          b.setAttribute('aria-label', img.alt || 'Screenshot ' + (n + 1));
+          b.addEventListener('click', function () { clearInterval(timer); show(n); });
+          dots.appendChild(b);
+        });
+        dots.hidden = false;
+        if (!matchMedia('(prefers-reduced-motion: reduce)').matches)
+          timer = setInterval(function () { show((i + 1) % shots.length); }, 4500);
+      }
+      show(0);
+    })();
+  </script>
+</body>
+</html>
