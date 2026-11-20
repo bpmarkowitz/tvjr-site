@@ -1,6 +1,6 @@
 #EXTM3U
-# Free live news channels from TV Jr. (https://tvjr.app)
-# Each stream is published for free by the broadcaster itself. Streams can move or end;
+# Free channels for TV Jr. (https://tvjr.app)
+# Each stream is published for free by its owner. Blender films (CC BY, blender.org) play once. Streams can move or end;
 # this list is updated when they do. Some may not be available in every country.
 #EXTINF:-1 group-title="News",DW English
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8
@@ -10,3 +10,11 @@ https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8
 https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_5000.m3u8
 #EXTINF:-1 group-title="News",Al Jazeera English
 https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8
+#EXTINF:-1 group-title="Sports & Culture",Red Bull TV
+https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
+#EXTINF:-1 group-title="Sports & Culture",Arirang (Korea, in English)
+https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 group-title="Blender Open Movies",Big Buck Bunny
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+#EXTINF:-1 group-title="Blender Open Movies",Tears of Steel
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
