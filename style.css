@@ -6,9 +6,6 @@
   --hairline: rgba(0, 0, 0, 0.1);
   --link: #0066cc;
   --pink: #e35f8f;
-  --rim: linear-gradient(145deg, #f2f2f4, #c9c9ce 45%, #eeeef0 70%, #b9b9be);
-  --mesh-bg: linear-gradient(180deg, #d9d9dd, #b7b7bc 60%, #cfcfd3);
-  --mesh-dot: rgba(60, 60, 66, 0.55);
   color-scheme: light dark;
 }
 
@@ -93,41 +90,31 @@ a:hover { text-decoration: underline; }
 }
 .cta:hover { text-decoration: none; opacity: 0.85; }
 
-/* HomeView, drawn: silver rim, black bezel, square screen, speaker base. */
+/* HomeView: the photo on top, with its screen cut out; screenshots sit behind the opening.
+   The opening is 640×640 at (50, 51) in the 741×880 image, padded a pixel under the bezel. */
 
 .device {
-  --w: min(560px, 100%);
-  width: var(--w);
+  position: relative;
+  width: min(520px, 100%);
   margin: 48px auto 0;
+  aspect-ratio: 741 / 880;
 }
 
 .device .frame {
   position: relative;
-  aspect-ratio: 1 / 1;
-  padding: 7.2%;
-  border-radius: 21%;
-  background: #0b0b0c;
-  box-shadow:
-    0 0 0 3px #d7d7db,
-    0 0 0 4px #a9a9ae,
-    0 30px 60px -20px rgba(0, 0, 0, 0.35);
-}
-
-.device .camera {
-  position: absolute;
-  top: 2.6%;
-  left: 50%;
-  width: 1.6%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  background: radial-gradient(circle at 35% 35%, #3a3d4a, #101014 70%);
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.18));
 }
 
 .device .screen {
-  position: relative;
-  height: 100%;
-  border-radius: 15%;
+  position: absolute;
+  left: calc(49 / 741 * 100%);
+  top: calc(50 / 880 * 100%);
+  width: calc(642 / 741 * 100%);
+  height: calc(642 / 880 * 100%);
   overflow: hidden;
   background: #1c1c1e;
 }
@@ -148,23 +135,9 @@ a:hover { text-decoration: underline; }
   inset: 0;
   display: grid;
   place-items: center;
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 15px;
-  background: radial-gradient(circle at 50% 40%, #2c2c30, #151517);
+  background: radial-gradient(circle at 50% 45%, #2c2c30, #151517);
 }
 .device .placeholder .logo { width: 22%; aspect-ratio: 566 / 819; color: rgba(255, 255, 255, 0.18); }
-
-.device .base {
-  position: relative;
-  width: 54%;
-  aspect-ratio: 2.85 / 1;
-  margin: -1px auto 0;
-  border-radius: 0 0 14% 14% / 0 0 22% 22%;
-  background:
-    radial-gradient(circle, var(--mesh-dot) 1.1px, transparent 1.4px) 0 0 / 7px 7px,
-    var(--mesh-bg);
-  box-shadow: inset 0 10px 14px -8px rgba(0, 0, 0, 0.45), 0 14px 24px -14px rgba(0, 0, 0, 0.4);
-}
 
 .dots { display: flex; justify-content: center; gap: 8px; margin-top: 22px; }
 .dots button {
@@ -273,7 +246,6 @@ a:hover { text-decoration: underline; }
   .site-nav { gap: 16px; }
   .brand span { font-size: 28px; }
   .brand .logo { width: 25px; height: 36px; }
-  .device .base { background-size: 5px 5px, auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
