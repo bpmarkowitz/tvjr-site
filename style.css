@@ -5,7 +5,6 @@
   --secondary: #6e6e73;
   --hairline: rgba(0, 0, 0, 0.1);
   --link: #0066cc;
-  --pink: #e35f8f;
   color-scheme: light dark;
 }
 
@@ -178,8 +177,8 @@ a:hover { text-decoration: underline; }
   width: 52px; height: 52px;
   display: grid; place-items: center;
   border-radius: 13px;
-  background: #1c1c1e;
-  color: var(--pink);
+  background: var(--text);   /* black tile, white glyph (flips in dark mode) */
+  color: var(--card);
 }
 .card .icon svg { width: 30px; height: 30px; }
 .card h3 { margin: 20px 0 6px; font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; }
