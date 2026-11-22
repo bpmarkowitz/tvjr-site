@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TV Jr. Support</title>
-  <meta name="description" content="Help with TV Jr.: adding HDHomeRun, Jellyfin, ErsatzTV and playlists, watching on HomeView, and contact.">
+  <meta name="description" content="Help with TV Jr.: adding HDHomeRun, Plex, Jellyfin, ErsatzTV and playlists, watching on HomeView, and contact.">
   <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -30,12 +30,13 @@
       <li><strong>Add ErsatzTV</strong> finds ErsatzTV on your network and adds its channels.</li>
       <li><strong>Import Playlist</strong> lets you pick channels from an M3U playlist (a link ending in <code>.m3u</code>).</li>
       <li><strong>Add Stream Link</strong> adds a single live stream (a link usually ending in <code>.m3u8</code>).</li>
+      <li><strong>Add Plex</strong> signs in to your Plex account for the movies and shows on your Plex server.</li>
       <li><strong>Add Jellyfin</strong> signs in to your Jellyfin server for your movies and shows.</li>
     </ul>
 
     <h2>Getting around</h2>
     <ul>
-      <li><strong>Home</strong> shows your favorites and recent channels. <strong>Channels</strong> lists every channel by source. <strong>Library</strong> has your Jellyfin movies and shows. Switch with the menu at the top right.</li>
+      <li><strong>Home</strong> shows your favorites and recent channels. <strong>Channels</strong> lists every channel by source. <strong>Library</strong> has your Plex and Jellyfin movies and shows. Switch with the menu at the top right.</li>
       <li><strong>Watch:</strong> tap a channel or video to play it full screen. Close it and it keeps playing in the mini player at the bottom. Tap the mini player to go back to full screen.</li>
       <li><strong>Favorites:</strong> swipe right on a channel, or touch and hold it.</li>
       <li><strong>Order:</strong> in Settings, <strong>Sources</strong> sets the order of sources (drag them), and <strong>Reorder Channels</strong> arranges channels within each one.</li>
@@ -50,9 +51,13 @@
     <p>HDHomeRun channels play while your iPhone is on the same Wi‑Fi network as the tuner, usually at home. If no tuner is found, make sure TV Jr. has <strong>Local Network</strong> access in the Settings app. Each channel you watch uses one of the HDHomeRun's tuners.</p>
     <p>The guide for HDHomeRun channels comes from SiliconDust, the maker of HDHomeRun. If a channel has no guide information, it's missing from their listings.</p>
 
+    <h2>Plex</h2>
+    <p>Tap <strong>Sign In with Plex</strong> and sign in on Plex's own page (Google, Apple and email accounts all work), or go to <code>plex.tv/link</code> on another device and enter the code TV Jr. shows. If your account has more than one server, pick the one you want. Your Library shows Continue Watching, Recently Added, and your Plex libraries by their own names. What you watch is saved back to Plex.</p>
+    <p>Plex may need Plex Pass to watch away from home. At home, it's free. Videos your iPhone or HomeView can't play directly are converted by your Plex server as they play.</p>
+
     <h2>Jellyfin</h2>
     <p>Enter your server's address (for example <code>http://192.168.1.20:8096</code>, or a web address like <code>https://example.com/jellyfin</code>), then sign in with your user name and password, or use Quick Connect. Your Library shows Continue Watching and lets you browse Movies and TV Shows. What you watch is saved back to your server, so you can pick it up anywhere.</p>
-    <p>If Jellyfin is your only source, Home shows Continue Watching, Recently Added, and Browse.</p>
+    <p>If Plex or Jellyfin is your only source, Home shows Continue Watching, Recently Added, and Browse.</p>
 
     <h2>ErsatzTV: channels from your own media</h2>
     <p><a href="https://ersatztv.org">ErsatzTV</a> is free, open-source software that turns your own movies and shows into live channels, complete with a program guide. It can use local folders, Jellyfin, Plex or Emby. Run it on a computer at home (Mac, Windows, Linux or Docker), make a channel, then in TV Jr. use <strong>Add ErsatzTV</strong>.</p>
@@ -80,7 +85,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <nav><a href="./">Home</a><a href="privacy.html">Privacy</a></nav>
-      <p>TV Jr. isn't affiliated with Jellyfin, SiliconDust or ErsatzTV.</p>
+      <p>TV Jr. isn't affiliated with Plex, Jellyfin, SiliconDust or ErsatzTV.</p>
     </div>
   </footer>
 </body>
